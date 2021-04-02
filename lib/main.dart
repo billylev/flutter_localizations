@@ -27,9 +27,9 @@ class MyApp extends StatelessWidget {
           const Locale('es', ''),
         ],
         localeResolutionCallback:
-            (Locale locale, Iterable<Locale> supportedLocales) {
+            (Locale? locale, Iterable<Locale> supportedLocales) {
           for (Locale supportedLocale in supportedLocales) {
-            if (supportedLocale.languageCode == locale.languageCode ||
+            if (supportedLocale.languageCode == locale!.languageCode ||
                 supportedLocale.countryCode == locale.countryCode) {
               return supportedLocale;
             }
